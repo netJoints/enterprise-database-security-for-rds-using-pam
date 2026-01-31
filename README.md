@@ -10,14 +10,14 @@ This repository represents just one snippet of the comprehensive work my team de
 Project Scope - Use Cases Enabled & Protected:
 As part of this engagement, we successfully implemented Britive PAM across multiple platforms and services:
 
-✅ AWS - Multi-account privileged access management
-✅ GCP - Cloud resource access control
-✅ ArgoCD - GitOps deployment platform security
-✅ GitHub - Source code repository access management
-✅ Customer Applications - Custom enterprise application protection
-✅ SaaS Applications - Third-party SaaS access governance
-✅ Agentic AI - AI agents using Amazon Bedrock and AgentCore
-✅ Amazon RDS - Database CLI-only access (detailed in this repo)
+- ✅ AWS - Multi-account privileged access management
+- ✅ GCP - Cloud resource access control
+- ✅ ArgoCD - GitOps deployment platform security
+- ✅ GitHub - Source code repository access management
+- ✅ Customer Applications - Custom enterprise application protection
+- ✅ SaaS Applications - Third-party SaaS access governance
+- ✅ Agentic AI - AI agents using Amazon Bedrock and AgentCore
+- ✅ Amazon RDS - Database CLI-only access (detailed in this repo)
 
 This repository focuses specifically on the RDS CLI-only access solution, which blocks AWS Console UI access while enabling seamless command-line operations for database administrators. This approach ensures security doesn't become a bottleneck for operational efficiency while maintaining full compliance with SAMA Cybersecurity Framework requirements.
 
