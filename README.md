@@ -1,4 +1,4 @@
-# Enterprise Database Security for Cloud Hosted Data (Amazon RDS MySQL)
+# Enterprise Database Security for Cloud Hosted Data (Amazon RDS MySQL) using PAM Zero Trust Model
 
 ## Introduction
 As VP of Solutions Engineering at Britive, I'm incredibly proud of our team's work and the significant wins we've achieved in the MENA region. While my role involves managing a large, talented team across the globe, I remain deeply hands-on, especially when working with our esteemed customers worldwide.
