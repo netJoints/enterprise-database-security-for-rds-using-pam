@@ -1,4 +1,4 @@
-# Securing Access to Critical Data on Amazon RDS MySQL with Britive PAM
+# Enterprise Database Security for Cloud Hosted Data (Amazon RDS MySQL)
 
 ## Introduction
 As VP of Solutions Engineering at Britive, I'm incredibly proud of our team's work and the significant wins we've achieved in the MENA region. While my role involves managing a large, talented team across the globe, I remain deeply hands-on, especially when working with our esteemed customers worldwide.
