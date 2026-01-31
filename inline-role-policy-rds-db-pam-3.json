@@ -1,0 +1,79 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "RDSInstanceFullAccess",
+            "Effect": "Allow",
+            "Action": [
+                "rds:DescribeDBInstances",
+                "rds:DescribeDBClusters",
+                "rds:DescribeDBSnapshots",
+                "rds:DescribeDBClusterSnapshots",
+                "rds:DescribeDBParameterGroups",
+                "rds:DescribeDBParameters",
+                "rds:DescribeDBSubnetGroups",
+                "rds:DescribeDBSecurityGroups",
+                "rds:DescribeDBLogFiles",
+                "rds:DownloadDBLogFilePortion",
+                "rds:ModifyDBInstance",
+                "rds:ModifyDBCluster",
+                "rds:RebootDBInstance",
+                "rds:StartDBInstance",
+                "rds:StopDBInstance",
+                "rds:CreateDBSnapshot",
+                "rds:DeleteDBSnapshot",
+                "rds:RestoreDBInstanceFromDBSnapshot",
+                "rds:CreateDBInstanceReadReplica",
+                "rds:PromoteReadReplica",
+                "rds:AddTagsToResource",
+                "rds:RemoveTagsFromResource",
+                "rds:ListTagsForResource",
+                "rds:DescribeEvents"
+            ],
+            "Resource": [
+                "arn:aws:rds:eu-west-1:123456789012:cluster:${aws:PrincipalTag/RdsIdentifier}",
+                "arn:aws:rds:eu-west-1:123456789012:db:${aws:PrincipalTag/RdsIdentifier}-*",
+                "arn:aws:rds:eu-west-1:123456789012:db:rds-db-cluster-*",
+                "arn:aws:rds:eu-west-1:123456789012:cluster-snapshot:*",
+                "arn:aws:rds:eu-west-1:123456789012:snapshot:*"
+            ]
+        },
+        {
+            "Sid": "RDSGeneralReadAccess",
+            "Effect": "Allow",
+            "Action": [
+                "rds:DescribeDBEngineVersions",
+                "rds:DescribeOrderableDBInstanceOptions",
+                "rds:DescribeValidDBInstanceModifications",
+                "rds:DescribeDBSubnetGroups",
+                "rds:DescribeOptionGroups",
+                "rds:DescribeDBParameterGroups"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "IAMDatabaseAuthentication",
+            "Effect": "Allow",
+            "Action": [
+                "rds-db:connect"
+            ],
+            "Resource": [
+                "arn:aws:rds-db:eu-west-1:123456789012:dbuser:*/*"
+            ]
+        },
+        {
+            "Sid": "CloudWatchLogsAccess",
+            "Effect": "Allow",
+            "Action": [
+                "logs:DescribeLogGroups",
+                "logs:DescribeLogStreams",
+                "logs:GetLogEvents",
+                "logs:FilterLogEvents"
+            ],
+            "Resource": [
+                "arn:aws:logs:eu-west-1:123456789012:log-group:/aws/rds/cluster/${aws:PrincipalTag/RdsIdentifier}/*",
+                "arn:aws:logs:eu-west-1:123456789012:log-group:/aws/rds/instance/${aws:PrincipalTag/RdsIdentifier}-*/*"
+            ]
+        }
+    ]
+}
